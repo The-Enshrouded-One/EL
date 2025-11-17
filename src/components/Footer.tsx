@@ -17,16 +17,16 @@ export const Footer = () => {
               Empowering rural communities through intelligent conversation and instant support.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
                 <Facebook className="w-4 h-4 text-primary" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
+              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
                 <Twitter className="w-4 h-4 text-primary" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
+              <a href="https://www.linkedin.com/in/syed-muzammil-hussaini/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
                 <Linkedin className="w-4 h-4 text-primary" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
+              <a href="https://www.instagram.com/syed_muzammil_hussaini/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors">
                 <Instagram className="w-4 h-4 text-primary" />
               </a>
             </div>
