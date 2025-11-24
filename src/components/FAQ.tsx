@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Is this service free to use?",
-    answer: "Yes, RuralConnect is completely free for all rural communities. We believe access to information should be available to everyone.",
+    answer: "Yes, Gramin Saathi is completely free for all rural communities. We believe access to information should be available to everyone.",
   },
   {
     question: "Which languages are supported?",

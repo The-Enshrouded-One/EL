@@ -20,7 +20,7 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm your RuralConnect assistant. How can I help you today?",
+      text: "Hello! I'm your Gramin Saathi assistant. How can I help you today?",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -82,7 +82,7 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
               <MessageCircle className="w-5 h-5" />
             </div>
             <div>
-              <div className="font-semibold">RuralConnect</div>
+              <div className="font-semibold">Gramin Saathi</div>
               <div className="text-xs text-primary-foreground/80 flex items-center gap-1">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 Online

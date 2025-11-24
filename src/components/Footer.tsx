@@ -2,7 +2,7 @@ import { MessageCircle, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instag
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="bg-muted/50 border-t border-border">
+    <footer id="contact" className="relative z-20 bg-background border-t border-border">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -11,7 +11,7 @@ export const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
                 <MessageCircle className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">RuralConnect</span>
+              <span className="text-xl font-bold">Gramin Saathi</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Empowering rural communities through intelligent conversation and instant support.
@@ -60,7 +60,7 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 text-primary" />
-                <span>support@ruralconnect.in</span>
+                <span>support@graminsaathi.in</span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 text-primary" />
@@ -75,7 +75,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} RuralConnect. All rights reserved. Built with care for rural India.</p>
+          <p>&copy; {new Date().getFullYear()} Gramin Saathi. All rights reserved. Built with care for rural India.</p>
         </div>
       </div>
     </footer>

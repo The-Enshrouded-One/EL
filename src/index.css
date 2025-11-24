@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 24% 16%;
 
-    --primary: 158 64% 52%;
+    --primary: 142 72% 49%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 16% 93%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 210 20% 90%;
     --input: 210 20% 90%;
-    --ring: 158 64% 52%;
+    --ring: 142 72% 49%;
 
     --radius: 0.75rem;
 
@@ -76,7 +76,7 @@ All colors MUST be HSL.
     --popover: 210 24% 10%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 158 64% 52%;
+    --primary: 142 72% 49%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 20% 16%;
@@ -93,7 +93,7 @@ All colors MUST be HSL.
 
     --border: 210 20% 18%;
     --input: 210 20% 18%;
-    --ring: 158 64% 52%;
+    --ring: 142 72% 49%;
 
     /* Dark mode gradients */
     --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(158 64% 42%) 100%);
@@ -129,7 +129,76 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .marquee-track {
+    animation: marquee var(--marquee-duration, 32s) linear infinite;
+  }
+
+  .gradient-text {
+    background: linear-gradient(120deg, #10361f 0%, #1b4d28 40%, #25d366 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .hero-typing__text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 1em;
+  }
+
+  .hero-typing__text::after {
+    content: "";
+    width: 2px;
+    height: 1.4em;
+    margin-left: 6px;
+    background: #2d5016;
+    animation: hero-caret-blink 1s steps(1, end) infinite;
+  }
+
+  .dark .hero-typing__text::after {
+    background: white;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes beam-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+.beam-path {
+  animation: beam-dash 4s linear infinite;
+}
+
+@keyframes hero-caret-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
   }
 }

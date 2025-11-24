@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Menu, X, Sun, Moon } from "lucide-react";
 
-interface NavbarProps {
-  onChatOpen: () => void;
-}
-
-export const Navbar = ({ onChatOpen }: NavbarProps) => {
+export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -29,7 +25,6 @@ export const Navbar = ({ onChatOpen }: NavbarProps) => {
 
   const navLinks = [
     { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
     { label: "Use Cases", href: "#use-cases" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
@@ -50,7 +45,7 @@ export const Navbar = ({ onChatOpen }: NavbarProps) => {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">RuralConnect</span>
+            <span className="text-xl font-bold text-foreground">Gramin Saathi</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -79,13 +74,6 @@ export const Navbar = ({ onChatOpen }: NavbarProps) => {
               ) : (
                 <Moon className="h-5 w-5" />
               )}
-            </Button>
-            <Button
-              onClick={onChatOpen}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-md hover:shadow-lg transition-all"
-            >
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Open Chatbot
             </Button>
           </div>
 
@@ -129,16 +117,6 @@ export const Navbar = ({ onChatOpen }: NavbarProps) => {
                 ) : (
                   <Moon className="h-5 w-5" />
                 )}
-              </Button>
-              <Button
-                onClick={() => {
-                  onChatOpen();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Open Chatbot
               </Button>
             </div>
           </div>
